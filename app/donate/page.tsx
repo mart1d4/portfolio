@@ -38,7 +38,7 @@ export default function HelpPage() {
     const options = {
         clientSecret,
         appearance: {
-            theme: prefersDarkScheme.matches ? "night" : "stripe",
+            theme: (prefersDarkScheme.matches ? "night" : "stripe") as "stripe" | "night" | "flat",
         },
     };
 
