@@ -32,8 +32,14 @@ export default function HelpPage() {
         };
     }, [amount]);
 
+    // Get current media prefers-color-scheme
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
     const options = {
         clientSecret,
+        appearance: {
+            theme: prefersDarkScheme.matches ? "night" : "stripe",
+        },
     };
 
     return (

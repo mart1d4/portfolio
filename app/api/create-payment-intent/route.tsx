@@ -9,8 +9,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 export async function POST(req: Request) {
     const { amount } = await req.json();
 
+    console.log("amount", amount);
+
     const paymentIntent = await stripe.paymentIntents.create({
-        amount,
+        amount: amount * 100,
         currency: "eur",
         automatic_payment_methods: {
             enabled: true,
