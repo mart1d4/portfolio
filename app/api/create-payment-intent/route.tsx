@@ -6,15 +6,11 @@ if (!process.env.STRIPE_SECRET_KEY?.length) {
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-function calculateOrderAmount(items: string[]) {
-    return 300;
-}
-
 export async function POST(req: Request) {
-    const { items } = await req.json();
+    const { amount } = await req.json();
 
     const paymentIntent = await stripe.paymentIntents.create({
-        amount: calculateOrderAmount(items),
+        amount,
         currency: "eur",
         automatic_payment_methods: {
             enabled: true,

@@ -4,7 +4,6 @@
 }
 
 .main > section > h1 {
-    text-align: center;
     margin-bottom: 20px;
     font-size: 38px;
     font-family: sans-serif;
@@ -14,5 +13,9 @@
 .main > section > p {
     font-size: 18px;
     font-family: sans-serif;
-    line-height: 1.5;
+    line-height: 1.75;
+}
+
+.main > section > input {
+    width: 100%;
 }

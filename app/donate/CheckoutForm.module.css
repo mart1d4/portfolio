@@ -28,3 +28,16 @@
 .submit:hover {
     filter: brightness(1.1);
 }
+
+.alert {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c22323;
+    padding: 16px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 600;
+}

@@ -82,8 +82,6 @@ export function CheckoutForm() {
             className={styles.form}
             onSubmit={handleSubmit}
         >
-            <h2>3€</h2>
-
             {message && (
                 <div
                     onClick={() => setMessage(null)}
