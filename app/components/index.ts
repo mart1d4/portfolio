@@ -4,3 +4,4 @@ export { Footer } from "./Footer/Footer";
 export { Header } from "./Header/Header";
 export { Alert } from "./Alert/Alert";
 export { Form } from "./Form/Form";
+export { Menu } from "./Menu/Menu";

@@ -1,4 +1,5 @@
 import { Header } from "@/app/components/Header/Header";
+import { Roboto } from "next/font/google";
 import { Footer } from "@components";
 import "./global.css";
 
@@ -10,9 +11,19 @@ export const metadata = {
     },
 };
 
+const roboto = Roboto({
+    weight: ["400", "500", "700"],
+    style: ["normal", "italic"],
+    subsets: ["latin"],
+    display: "swap",
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html
+            lang="en"
+            className={roboto.className}
+        >
             <body>
                 <Header />
                 {children}

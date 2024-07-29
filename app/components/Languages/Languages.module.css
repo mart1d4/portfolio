@@ -17,6 +17,7 @@
     font-weight: 500;
     font-size: 14px;
     transition: var(--transition);
+    user-select: none;
 }
 
 .container > button:hover,
