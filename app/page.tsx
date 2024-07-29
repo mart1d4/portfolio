@@ -9,10 +9,10 @@ export default function HomePage() {
                     <h1>Got lost in the vastness of the internet?</h1>
 
                     <p>
-                        Welcome here stranger! I'm a software engineer who loves to build things for
-                        the web. I'm currently working on some cool projects and learning new
-                        technologies. I'm also open to new opportunities, so feel free to contact me
-                        if you want to work together.
+                        Welcome here stranger! I'm a soon-to-be software engineer who loves to build
+                        things for the web. I'm currently working on some cool projects and learning
+                        new technologies. I'm also open to new opportunities, so feel free to
+                        contact me if you want to work together.
                     </p>
 
                     <div className={styles.cta}>
@@ -21,15 +21,10 @@ export default function HomePage() {
                     </div>
                 </div>
 
-                <div>
-                    <video
-                        src="/assets/palmtree.webm"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                    />
-                </div>
+                <img
+                    src="/assets/tourist.svg"
+                    alt="Illustration of a tourist with a map"
+                />
             </section>
 
             <section className={styles.game}>

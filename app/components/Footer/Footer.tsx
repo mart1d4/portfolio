@@ -19,19 +19,7 @@ export function Footer() {
                                 aria-label={social.name}
                                 rel="noopener noreferrer"
                             >
-                                <svg
-                                    stroke={social.stroke || "currentColor"}
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill={social.fill || "none"}
-                                    strokeLinejoin="round"
-                                    strokeLinecap="round"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="2"
-                                    height="20"
-                                    width="20"
-                                >
-                                    {social.icon}
-                                </svg>
+                                {social.icon}
                             </a>
                         ))}
                     </div>

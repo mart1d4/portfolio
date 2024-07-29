@@ -1,6 +1,6 @@
 .main {
     margin: 0 auto;
-    max-width: 650px;
+    max-width: 625px;
 }
 
 .main > section {
@@ -9,7 +9,6 @@
 }
 
 .main > section > h1 {
-    text-align: center;
     font-size: 48px;
     font-weight: 700;
     color: var(--fg-1);
@@ -17,7 +16,6 @@
 }
 
 .main > section > p {
-    text-align: center;
     font-size: 20px;
     font-weight: 400;
     color: var(--fg-2);

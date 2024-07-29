@@ -68,3 +68,9 @@
 .socials a:active {
     filter: brightness(1.15);
 }
+
+.socials a > svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}

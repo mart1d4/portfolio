@@ -40,6 +40,7 @@ export function Header() {
                     <Link
                         href="/donate"
                         className={styles.donate}
+                        aria-label="Link to donate page"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

@@ -45,25 +45,53 @@
 
 .socials > a,
 .socials > button {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
-    color: var(--primary);
-    background-color: var(--bg-2);
+    width: 70px;
+    height: 70px;
+    color: var(--fg-1);
+    background-color: transparent;
     border-radius: 50%;
     margin: 0 20px 20px;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
+    z-index: 0;
 }
 
-.socials > a:hover,
-.socials > a:focus-visible,
-.socials > button:hover,
-.socials > button:focus-visible {
+.socials > a::after,
+.socials > button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
     background-color: var(--bg-3);
+    transition: transform 0.15s ease, filter 0.15s ease;
+    z-index: -1;
+}
+
+.socials > a:hover::after,
+.socials > a:focus-visible::after,
+.socials > button:hover::after,
+.socials > button:focus-visible::after {
+    transform: scale(0.9);
+}
+
+.socials > a:active,
+.socials > button:active {
+    filter: brightness(1.15);
+}
+
+.socials > a > svg,
+.socials > button > svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
 }
 
 @media screen and (max-width: 768px) {
