@@ -1,7 +1,9 @@
 import Stripe from "stripe";
 
 if (!process.env.STRIPE_SECRET_KEY?.length) {
-    throw new Error("The environment variable STRIPE_SECRET_KEY must be set.");
+    throw new Error(
+        "The environment variable STRIPE_SECRET_KEY must be set to create payment intents."
+    );
 }
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);

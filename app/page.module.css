@@ -1,0 +1,164 @@
+.main {
+    margin: 120px auto;
+    max-width: var(--max-width);
+}
+
+.main > section {
+    padding: var(--content-padding) var(--spacing);
+    animation: fadeIn 0.5s ease;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+.hero > div > h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--fg-1);
+    margin-bottom: 40px;
+}
+
+.hero > div > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--fg-2);
+    line-height: 1.75;
+}
+
+.cta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.cta > a,
+.game > a {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 1000px;
+    background-color: var(--primary);
+    border: none;
+    cursor: pointer;
+    color: var(--primary-fg);
+    transition: var(--transition);
+    user-select: none;
+    border: 2px solid var(--primary);
+    margin: 0 24px 12px 0;
+}
+
+.cta > a:hover,
+.cta > a:focus-visible,
+.game > a:hover,
+.game > a:focus-visible {
+    filter: brightness(1.15);
+}
+
+.cta > a:active,
+.game > a:active {
+    filter: brightness(1.3);
+}
+
+.cta > a:last-child {
+    color: var(--fg-1);
+    background-color: var(--bg-1);
+}
+
+.cta > a:last-child:hover,
+.cta > a:last-child:focus-visible {
+    color: var(--primary-fg);
+    background-color: var(--primary);
+}
+
+.hero > :nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero > :nth-child(2) > video {
+    display: block;
+    width: 85%;
+    height: auto;
+    margin: auto;
+}
+
+.game > h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--fg-1);
+    margin-bottom: 20px;
+}
+
+.game > p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fg-2);
+    line-height: 1.75;
+    margin: 0 auto;
+}
+
+.game > a {
+    margin: 40px auto 0;
+    display: block;
+    width: fit-content;
+}
+
+@media screen and (max-width: 920px) {
+    .hero > div > h1,
+    .game > h2 {
+        font-size: clamp(32px, 5vw, 48px);
+    }
+
+    .hero > div > p,
+    .game > p {
+        font-size: clamp(16px, 3vw, 18px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        margin: 80px auto;
+    }
+
+    .hero {
+        grid-template-columns: 0.7fr;
+        justify-content: center;
+    }
+
+    .hero > div > h1 {
+        margin-bottom: 20px;
+    }
+
+    .cta {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main {
+        margin: 40px auto;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,107 @@
+.main {
+    margin: 120px auto;
+    max-width: var(--max-width);
+}
+
+.main > section {
+    animation: fadeIn 0.5s ease;
+    padding: var(--content-padding) var(--spacing);
+}
+
+.main > section > h1,
+.main > section > h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--fg-1);
+    margin-bottom: 20px;
+}
+
+.main > section > p {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fg-2);
+    line-height: 1.75;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.main > section > p > a {
+    color: var(--primary);
+}
+
+.centered > h1,
+.centered > h2,
+.centered > p {
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.socials > a,
+.socials > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    color: var(--primary);
+    background-color: var(--bg-2);
+    border-radius: 50%;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.socials > a:hover,
+.socials > a:focus-visible,
+.socials > button:hover,
+.socials > button:focus-visible {
+    background-color: var(--bg-3);
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        margin: 80px auto;
+    }
+
+    .main > section > h1,
+    .main > section > h2 {
+        font-size: clamp(32px, 5vw, 42px);
+    }
+
+    .main > section > p {
+        font-size: clamp(16px, 3vw, 20px);
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main {
+        margin: 40px auto;
+    }
+
+    .socials > a,
+    .socials > button {
+        width: 60px;
+        height: 60px;
+        margin: 0 10px 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,6 +1,6 @@
 .main {
-    margin: 0 auto;
-    max-width: 650px;
+    margin: 120px auto;
+    max-width: var(--max-width);
 }
 
 .main > section {
@@ -10,7 +10,7 @@
 
 .main > section > h1 {
     text-align: center;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 700;
     color: var(--fg-1);
     margin-bottom: 20px;
@@ -22,15 +22,29 @@
     font-weight: 400;
     color: var(--fg-2);
     line-height: 1.75;
-    margin: 0 auto 40px;
+    margin: 0 auto;
 }
 
-.amount {
-    margin: 40px 0;
+@media screen and (max-width: 920px) {
+    .main > section > h1 {
+        font-size: clamp(32px, 5vw, 48px);
+    }
+
+    .main > section > p {
+        font-size: clamp(16px, 3vw, 18px);
+    }
 }
 
-.amount > input {
-    width: 100%;
+@media screen and (max-width: 768px) {
+    .main {
+        margin: 80px auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main {
+        margin: 40px auto;
+    }
 }
 
 @keyframes fadeIn {

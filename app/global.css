@@ -1,14 +1,108 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --bg-1: #f8f9fa;
+    --bg-2: #e9ecef;
+    --bg-3: #dee2e6;
+    --fg-1: #333;
+    --fg-2: #495057;
+    --fg-3: #868e96;
+    --border: #ced4da;
+    --primary: #0f7aaf;
+    --primary-50: #0f7aaf0d;
+    --primary-20: #0f7aaf33;
+    --primary-08: #0f7aaf14;
+    --primary-fg: #fff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --success-2: #217735;
+    --success-fg: #fff;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #c72b3a;
+    --danger-2: #a71c2a;
+    --danger-fg: #fff;
+    --max-width: 1100px;
+    --spacing: 40px;
+    --content-padding: 120px;
+    --radius: 3px;
+    --transition: filter 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease,
+        border-color 0.15s ease;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #333;
-        color: #f8f9fa;
+    :root {
+        --bg-1: #202020;
+        --bg-2: #303030;
+        --bg-3: #353535;
+        --fg-1: #f8f9fa;
+        --fg-2: #dee2e6;
+        --fg-3: #e9ecef;
+        --border: #495057;
     }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --spacing: 20px;
+        --content-padding: 80px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    :root {
+        --content-padding: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root {
+        --spacing: 10px;
+        --content-padding: 20px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+*:focus-visible {
+    outline: none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02),
+        0 0 0 3px var(--primary-20), 0 1px 1px 0 var(--primary-08);
+}
+
+html,
+body {
+    color: var(--fg-1);
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+    background-color: var(--bg-1);
 }

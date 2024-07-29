@@ -1,6 +1,7 @@
 import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import styles from "./CheckoutForm.module.css";
 import { useEffect, useState } from "react";
+import { Alert } from "../components";
 
 export function CheckoutForm() {
     const stripe = useStripe();
@@ -40,12 +41,16 @@ export function CheckoutForm() {
         });
     }, [stripe]);
 
-    const handleSubmit = async (e) => {
+    useEffect(() => {
+        if (message) {
+            setTimeout(() => setMessage(null), 5000);
+        }
+    }, [message]);
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         if (!stripe || !elements) {
-            // Stripe.js hasn't yet loaded.
-            // Make sure to disable form submission until Stripe.js has loaded.
             return;
         }
 
@@ -54,16 +59,10 @@ export function CheckoutForm() {
         const { error } = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                // Make sure to change this to your payment completion page
-                return_url: `${window.location.origin}/subscribe/success`,
+                return_url: `${window.location.origin}/donate/success`,
             },
         });
 
-        // This point will only be reached if there is an immediate error when
-        // confirming the payment. Otherwise, your customer will be redirected to
-        // your `return_url`. For some payment methods like iDEAL, your customer will
-        // be redirected to an intermediate site first to authorize the payment, then
-        // redirected to the `return_url`.
         if (error.type === "card_error" || error.type === "validation_error") {
             setMessage(error.message ?? "An unexpected error occurred.");
         } else {
@@ -71,11 +70,7 @@ export function CheckoutForm() {
         }
 
         setIsLoading(false);
-    };
-
-    const paymentElementOptions = {
-        layout: "tabs",
-    };
+    }
 
     return (
         <form
@@ -83,29 +78,23 @@ export function CheckoutForm() {
             onSubmit={handleSubmit}
         >
             {message && (
-                <div
-                    onClick={() => setMessage(null)}
-                    className={`${styles.alert} ${styles.success}`}
-                >
-                    {message}
-                </div>
+                <Alert
+                    message={message}
+                    type={message.includes("successful") ? "success" : "danger"}
+                />
             )}
 
-            <main>
-                <div>
-                    <PaymentElement
-                        id="payment-element"
-                        options={paymentElementOptions as any}
-                    />
+            <PaymentElement
+                id="payment-element"
+                options={{ layout: "tabs" } as any}
+            />
 
-                    <button
-                        className={styles.submit}
-                        disabled={isLoading || !stripe || !elements}
-                    >
-                        <span>{isLoading ? <div className={styles.spinner} /> : "Pay"}</span>
-                    </button>
-                </div>
-            </main>
+            <button
+                className={styles.submit}
+                disabled={isLoading || !stripe || !elements}
+            >
+                Donate {isLoading && <div className={styles.loading} />}
+            </button>
         </form>
     );
 }
