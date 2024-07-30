@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -21,9 +22,16 @@ export default function HomePage() {
                     </div>
                 </div>
 
-                <img
+                <Image
+                    priority
+                    width={500}
+                    height={500}
                     src="/assets/tourist.svg"
                     alt="Illustration of a tourist with a map"
+                    style={{
+                        height: "auto",
+                        width: "100%",
+                    }}
                 />
             </section>
 
