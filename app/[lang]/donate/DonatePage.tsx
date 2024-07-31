@@ -1,6 +1,6 @@
 "use client";
 
-import { loadStripe, Stripe } from "@stripe/stripe-js";
+import { loadStripe, Stripe, StripeElementLocale } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { CheckoutForm } from "./CheckoutForm";
 import { useEffect, useState } from "react";
@@ -48,11 +48,18 @@ export default function Donate({ dic }: { dic: Dictionary }) {
         prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     }
 
+    const root = document.documentElement;
+    const primary = getComputedStyle(root).getPropertyValue("--primary");
+
     const options = {
         clientSecret,
         appearance: {
             theme: (prefersDarkScheme?.matches ? "night" : "stripe") as "stripe" | "night" | "flat",
+            variables: {
+                colorPrimary: primary,
+            },
         },
+        locale: dic.lang as StripeElementLocale,
     };
 
     return (
