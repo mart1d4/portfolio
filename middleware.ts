@@ -40,10 +40,11 @@ export function middleware(request: NextRequest) {
             "/sitemap.xml",
             "/favicon.ico",
             "/.well-known/discord",
-            "/assets/tourist.svg",
             "/assets/flags/en.svg",
             "/assets/flags/fr.svg",
+            "/assets/tourist.svg",
             "/assets/404.svg",
+            "/assets/me.webp",
         ].includes(pathname)
     ) {
         return;

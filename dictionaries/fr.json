@@ -15,14 +15,14 @@
     "landing": {
         "hero": {
             "title": "Perdu dans l'immensité de l'internet ?",
-            "text": "Bienvenue ici étranger ! Je suis un futur ingénieur en informatique qui adore innover sur le web. Je travaille actuellement sur des projets sympas et j'apprends de nouvelles technologies. Je suis également ouvert à de nouvelles opportunités, alors hésite pas à me contacter si tu veux qu'on travaille ensemble.",
+            "text": "Bienvenue ici étranger ! Je suis un futur ingénieur en informatique qui adore innover sur le web. Je travaille actuellement sur des projets sympas et j'apprends de nouvelles technologies. Je suis également ouvert à de nouvelles opportunités, alors n'hésites pas à me contacter si tu veux qu'on travaille ensemble.",
             "button1": "Découvre mes projets",
             "button2": "Contacte-moi",
             "illustrationAlt": "Illustration d'un touriste avec une carte"
         },
         "game": {
             "title": "Déjà ennuyé ? Joue à ce petit jeu que j'ai fait pour toi!",
-            "text": "Ou pas, c'est comme tu veux. Je suis pas ton patron. Je rigole, je suis ton patron maintenant. Joue au jeu. Mais, attends, il semble que le jeu ne fonctionne pas. Finalement, tu devrais plutôt regarder mes projets.",
+            "text": "Ou pas, c'est comme tu veux, je ne suis pas ton patron après tout. Quoique, enfait je le suis maintenant! Tu dois jouer au jeu! Hmm... attends... il semble que le jeu ne fonctionne pas. Finalement, tu devrais plutôt regarder mes projets.",
             "button": "S'il te plaît regarde mes projets 🥺"
         }
     },

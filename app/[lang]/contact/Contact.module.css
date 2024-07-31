@@ -8,6 +8,10 @@
     padding: var(--content-padding) var(--spacing);
 }
 
+.main > section:not(:last-child) {
+    margin-bottom: 120px;
+}
+
 .main > section > h1,
 .main > section > h2 {
     font-size: 42px;
