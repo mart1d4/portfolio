@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Locale } from "@/i18n-config";
 import styles from "./Menu.module.css";
+import { Dictionary } from "@/types";
 import Link from "next/link";
 
-export function Menu() {
+export function Menu({ lang, dic }: { lang: Locale; dic: Dictionary }) {
     const [open, setOpen] = useState(false);
     const menuRef = useRef<HTMLUListElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
@@ -58,13 +60,13 @@ export function Menu() {
                 id="menu-links"
                 className={styles.links}
             >
-                {["Home", "About", "Projects", "Contact"].map((item, i) => (
+                {["home", "about", "projects", "contact"].map((item, i) => (
                     <li key={item}>
                         <Link
                             onClick={() => setOpen(false)}
-                            href={i === 0 ? "/" : `/${item.toLowerCase()}`}
+                            href={i === 0 ? `/${lang}` : `/${lang}/${item}`}
                         >
-                            {item}
+                            {dic.navbar[item]}
                         </Link>
                     </li>
                 ))}

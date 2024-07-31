@@ -1,9 +1,11 @@
 import styles from "./Header.module.css";
+import { Locale } from "@/i18n-config";
 import { Languages, Menu } from "../";
+import { Dictionary } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Header() {
+export function Header({ lang, dic }: { lang: Locale; dic: Dictionary }) {
     return (
         <header className={styles.header}>
             <div>
@@ -15,7 +17,7 @@ export function Header() {
                     >
                         <Image
                             src="/assets/me.webp"
-                            alt="A selfie of myself"
+                            alt={dic.header.iconAlt}
                             width={44}
                             height={44}
                         />
@@ -26,16 +28,18 @@ export function Header() {
 
                 <nav>
                     <ul className={styles.headerNav}>
-                        {["Home", "About", "Projects", "Contact"].map((item, i) => (
+                        {["home", "about", "projects", "contact"].map((item, i) => (
                             <li key={item}>
-                                <Link href={i === 0 ? "/" : `/${item.toLowerCase()}`}>{item}</Link>
+                                <Link href={i === 0 ? `/${lang}` : `/${lang}/${item}`}>
+                                    {dic.navbar[item]}
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
 
                 <div>
-                    <Languages />
+                    <Languages lang={lang} />
 
                     <Link
                         href="/donate"
@@ -46,14 +50,17 @@ export function Header() {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            height="24"
-                            width="24"
+                            height="20"
+                            width="20"
                         >
-                            <path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336zm-5 2.66c-2.052 0 -3.768 1.449 -4.549 3.5h-.451a1 1 0 0 0 -.117 1.993l.134 .007a7.298 7.298 0 0 0 0 1h-.017a1 1 0 0 0 0 2h.452c.78 2.053 2.496 3.5 4.548 3.5c1.141 0 2.217 -.457 3.084 -1.27a1 1 0 0 0 -1.368 -1.46c-.509 .478 -1.102 .73 -1.716 .73c-.922 0 -1.776 -.578 -2.335 -1.499l1.335 -.001a1 1 0 0 0 0 -2h-1.977a5.342 5.342 0 0 1 0 -1h1.977a1 1 0 0 0 0 -2h-1.336c.56 -.921 1.414 -1.5 2.336 -1.5c.615 0 1.208 .252 1.717 .73a1 1 0 0 0 1.368 -1.46c-.867 -.812 -1.943 -1.27 -3.085 -1.27z" />
+                            <path d="M12,0C6.486,0,2,4.486,2,10s4.486,10,10,10,10-4.486,10-10S17.514,0,12,0Zm-1.356,8.761l3.041,.506c1.342,.224,2.315,1.374,2.315,2.733,0,1.654-1.346,3-3,3v1h-2v-1c-1.654,0-3-1.346-3-3h2c0,.552,.449,1,1,1h2c.551,0,1-.448,1-1,0-.379-.271-.698-.644-.761l-3.041-.506c-1.342-.224-2.315-1.374-2.315-2.733,0-1.654,1.346-3,3-3v-1h2v1c1.654,0,3,1.346,3,3h-2c0-.552-.449-1-1-1h-2c-.551,0-1,.448-1,1,0,.379,.271,.698,.644,.761Zm13.356,11.739c0,1.933-1.567,3.5-3.5,3.5H3.5c-1.933,0-3.5-1.567-3.5-3.5,0-1.55,1.014-2.849,2.409-3.309,2.189,2.915,5.664,4.809,9.591,4.809s7.401-1.894,9.591-4.809c1.396,.46,2.409,1.76,2.409,3.309Z" />
                         </svg>
                     </Link>
 
-                    <Menu />
+                    <Menu
+                        lang={lang}
+                        dic={dic}
+                    />
                 </div>
             </div>
         </header>

@@ -1,0 +1,54 @@
+{
+    "header": {
+        "iconAlt": "A selfie of me"
+    },
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "footer": {
+        "text": "All rights reserved. All wrongs reserved.",
+        "backToTop": "Back to top"
+    },
+    "landing": {
+        "hero": {
+            "title": "Got lost in the vastness of the internet?",
+            "text": "Welcome here stranger! I'm a soon-to-be software engineer who loves to build things for the web. I'm currently working on some cool projects and learning new technologies. I'm also open to new opportunities, so feel free to contact me if you want to work together.",
+            "button1": "Check out my projects",
+            "button2": "Contact me",
+            "illustrationAlt": "Illustration of a tourist with a map"
+        },
+        "game": {
+            "title": "Bored already? Play this little game I made for you",
+            "text": "Or don't, it's up to you. I'm not your boss. Kidding, I'm your boss now. Play the game. But, wait, it seems like the game is not working. I guess you have to check out my projects instead.",
+            "button": "Pleeeaaaseee look at my projects 🥺"
+        }
+    },
+    "contact": {
+        "hero": {
+            "title": "Contact me",
+            "text": "Want to get in touch? There are a few ways you can reach me. The easiest is to send me an email at"
+        },
+        "socials": {
+            "title": "Find me on my socials"
+        },
+        "form": {
+            "title": "Or you can use the form below",
+            "text": "You can just send a message and leave both your name and email empty, if you want to remain anonymous.",
+            "name": "Name",
+            "nameTooLong": "Must be 50 characters or less.",
+            "email": "Email",
+            "emailTooLong": "Must be 256 characters or less.",
+            "message": "Message",
+            "messagePlaceholder": "I am fluent in over six million forms of communication, a feat I doubt you can match.",
+            "messageRequired": "Message is required",
+            "messageTooLong": "Must be 4096 characters or less.",
+            "button": "Send message",
+            "error": "An error occurred. Please try again later.",
+            "success": "Message sent successfully!"
+        },
+        "usernameCopied": "Username copied to clipboard!"
+    }
+}

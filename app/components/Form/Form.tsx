@@ -1,10 +1,13 @@
 "use client";
 
 import styles from "./Form.module.css";
+import { Dictionary } from "@/types";
 import { Alert } from "@components";
 import { useState } from "react";
 
-export function Form() {
+export function Form({ dic }: { dic: Dictionary }) {
+    const formDic = dic.contact.form;
+
     const [loading, setLoading] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -20,20 +23,20 @@ export function Form() {
         if (!message || message.length > 4096) {
             setErrors((prev) => ({
                 ...prev,
-                message: !message ? "Message is required." : "Must be 4096 characters or less.",
+                message: !message ? formDic.messageRequired : formDic.messageTooLong,
             }));
             setLoading(false);
             return;
         }
 
         if (name.length > 50) {
-            setErrors((prev) => ({ ...prev, name: "Must be 50 characters or less." }));
+            setErrors((prev) => ({ ...prev, name: formDic.nameTooLong }));
             setLoading(false);
             return;
         }
 
         if (email.length > 256) {
-            setErrors((prev) => ({ ...prev, email: "Must be 256 characters or less." }));
+            setErrors((prev) => ({ ...prev, email: formDic.emailTooLong }));
             setLoading(false);
             return;
         }
@@ -46,9 +49,9 @@ export function Form() {
             });
 
             if (!response.ok) {
-                setError("An error occurred. Please try again later.");
+                setError(formDic.error);
             } else {
-                setSuccess("Message sent successfully!");
+                setSuccess(formDic.success);
                 setName("");
                 setEmail("");
                 setMessage("");
@@ -81,15 +84,12 @@ export function Form() {
                 />
             )}
 
-            <p>
-                You can just send a message and leave both your name and email empty, if you want to
-                remain anonymous.
-            </p>
+            <p>{formDic.text}</p>
 
             <div className={styles.inputs}>
                 <div>
                     <label htmlFor="name">
-                        Name
+                        {formDic.name}
                         {errors.name && <span>* {errors.name}</span>}
                     </label>
 
@@ -109,7 +109,7 @@ export function Form() {
 
                 <div>
                     <label htmlFor="email">
-                        Email
+                        {formDic.email}
                         {errors.email && <span>* {errors.email}</span>}
                     </label>
 
@@ -129,7 +129,7 @@ export function Form() {
 
                 <div>
                     <label htmlFor="message">
-                        Message
+                        {formDic.message}
                         <span>* {!!errors.message?.length && errors.message}</span>
                     </label>
 
@@ -137,7 +137,7 @@ export function Form() {
                         id="message"
                         name="message"
                         maxLength={4096}
-                        placeholder="I am fluent in over six million forms of communication, a feat I doubt you can match."
+                        placeholder={formDic.messagePlaceholder}
                         value={message}
                         onChange={(e) => {
                             setMessage(e.target.value);
@@ -151,7 +151,7 @@ export function Form() {
                 </div>
 
                 <button type="submit">
-                    Send Message
+                    {formDic.button}
                     {loading && <div className={styles.loading} />}
                 </button>
             </div>

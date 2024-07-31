@@ -15,9 +15,14 @@
     background-color: var(--success);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     animation: popIn 0.2s ease;
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
     line-height: 1.75;
+}
+
+.alert > div {
+    width: 32px;
+    height: 32px;
 }
 
 .alert.danger {
@@ -30,13 +35,13 @@
     background-color: var(--primary);
 }
 
-.alert > svg {
+.alert svg {
     padding: 4px;
     border-radius: 50%;
     background-color: var(--success-2);
 }
 
-.alert.danger > svg {
+.alert.danger svg {
     background-color: var(--danger-2);
 }
 
@@ -48,5 +53,13 @@
     100% {
         transform: translateX(-50%) scale(1);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .alert {
+        white-space: normal;
+        overflow: visible;
+        width: 90%;
     }
 }

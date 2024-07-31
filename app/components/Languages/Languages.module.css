@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    position: relative;
 }
 
 .container > button {
@@ -33,4 +33,41 @@
     width: 20px;
     height: 20px;
     margin-right: 4px;
+    pointer-events: none;
+}
+
+.languages {
+    padding: 6px;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-2);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.languages a {
+    display: flex;
+    padding: 4px 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+}
+
+.languages a:hover,
+.languages a:focus-visible {
+    background-color: var(--bg-3);
+}
+
+.languages > li:first-child > a {
+    margin-bottom: 8px;
+}
+
+.languages img {
+    width: 20px;
+    height: 20px;
+    user-select: none;
+    pointer-events: none;
 }

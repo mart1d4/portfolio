@@ -1,0 +1,54 @@
+{
+    "header": {
+        "iconAlt": "Un selfie de moi"
+    },
+    "navbar": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "contact": "Contact"
+    },
+    "footer": {
+        "text": "Tous droits réservés. Tous torts réservés.",
+        "backToTop": "Retour en haut"
+    },
+    "landing": {
+        "hero": {
+            "title": "Perdu dans l'immensité de l'internet ?",
+            "text": "Bienvenue ici étranger ! Je suis un futur ingénieur en informatique qui adore innover sur le web. Je travaille actuellement sur des projets sympas et j'apprends de nouvelles technologies. Je suis également ouvert à de nouvelles opportunités, alors hésite pas à me contacter si tu veux qu'on travaille ensemble.",
+            "button1": "Découvre mes projets",
+            "button2": "Contacte-moi",
+            "illustrationAlt": "Illustration d'un touriste avec une carte"
+        },
+        "game": {
+            "title": "Déjà ennuyé ? Joue à ce petit jeu que j'ai fait pour toi!",
+            "text": "Ou pas, c'est comme tu veux. Je suis pas ton patron. Je rigole, je suis ton patron maintenant. Joue au jeu. Mais, attends, il semble que le jeu ne fonctionne pas. Finalement, tu devrais plutôt regarder mes projets.",
+            "button": "S'il te plaît regarde mes projets 🥺"
+        }
+    },
+    "contact": {
+        "hero": {
+            "title": "Contacte moi",
+            "text": "Tu shoutaites me contacter ? Il y a plusieurs façons de me joindre. La plus simple est de m'envoyer un email à"
+        },
+        "socials": {
+            "title": "Retrouve moi sur mes réseaux sociaux"
+        },
+        "form": {
+            "title": "Tu peux aussi utiliser le formulaire ci-dessous",
+            "text": "Tu peux simplement envoyer un message sans fournir de nom ni d'email si tu souhaites rester anonyme.",
+            "name": "Nom",
+            "nameTooLong": "Doit contenir 50 caractères ou moins.",
+            "email": "Email",
+            "emailTooLong": "Doit contenir 256 caractères ou moins.",
+            "message": "Message",
+            "messagePlaceholder": "Je maîtrise plus de six millions de formes de communication, un exploit que tu ne peux probablement pas égaler.",
+            "messageRequired": "Message requis",
+            "messageTooLong": "Doit contenir 4096 caractères ou moins.",
+            "button": "Envoyer le message",
+            "error": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+            "success": "Message envoyé avec succès !"
+        },
+        "usernameCopied": "Nom d'utilisateur copié dans le presse-papiers!"
+    }
+}

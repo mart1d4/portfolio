@@ -3,11 +3,18 @@ import { Roboto } from "next/font/google";
 import { Footer } from "@components";
 import "./global.css";
 
+import { i18n, type Locale } from "../../i18n-config";
+import { getDictionary } from "@/lib/getDictionary";
+
+export async function generateStaticParams() {
+    return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
 export const metadata = {
     title: "My Little Place",
     description: "A place to call my own. A place to be me. A place to be free. A place to be.",
     icons: {
-        icon: "/assets/favicon.ico",
+        icon: "/favicon.ico",
     },
 };
 
@@ -18,16 +25,27 @@ const roboto = Roboto({
     display: "swap",
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+    children,
+    params,
+}: {
+    children: React.ReactNode;
+    params: { lang: Locale };
+}) {
+    const dictionary = await getDictionary(params.lang);
+
     return (
         <html
-            lang="en"
+            lang={params.lang}
             className={roboto.className}
         >
             <body>
-                <Header />
+                <Header
+                    dic={dictionary}
+                    lang={params.lang}
+                />
                 {children}
-                <Footer />
+                <Footer dic={dictionary} />
             </body>
         </html>
     );

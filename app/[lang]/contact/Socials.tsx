@@ -3,9 +3,10 @@
 import { Alert, Tooltip, TooltipContent, TooltipTrigger } from "@components";
 import styles from "./Contact.module.css";
 import { socials } from "@/lib/socials";
+import { Dictionary } from "@/types";
 import { useState } from "react";
 
-export function Socials() {
+export function Socials({ dic }: { dic: Dictionary }) {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
 
@@ -13,14 +14,14 @@ export function Socials() {
         <div className={styles.socials}>
             {success && (
                 <Alert
-                    message="Username copied to clipboard!"
+                    message={dic.contact.usernameCopied}
                     type="success"
                 />
             )}
 
             {error && (
                 <Alert
-                    message="An error occurred. Please try again."
+                    message={dic.contact.form.error}
                     type="danger"
                 />
             )}

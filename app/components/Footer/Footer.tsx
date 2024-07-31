@@ -1,13 +1,14 @@
 import styles from "./Footer.module.css";
 import { socials } from "@/lib/socials";
+import { Dictionary } from "@/types";
 
-export function Footer() {
+export async function Footer({ dic }: { dic: Dictionary }) {
     return (
         <footer className={styles.footer}>
             <div>
                 <div className={styles.content}>
                     <p>&copy; {new Date().getFullYear()} MART1D4</p>
-                    <p>All rights reserved. All wrongs reserved.</p>
+                    <p>{dic.footer.text}</p>
 
                     <div className={styles.socials}>
                         {socials.map((social) => (
@@ -27,8 +28,8 @@ export function Footer() {
 
                 <a
                     href="#top"
-                    title="Back to top"
-                    aria-label="Back to top"
+                    title={dic.footer.backToTop}
+                    aria-label={dic.footer.backToTop}
                     className={styles.backToTop}
                 >
                     <svg

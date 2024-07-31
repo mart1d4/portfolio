@@ -1,7 +1,7 @@
 import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import styles from "./CheckoutForm.module.css";
 import { useEffect, useState } from "react";
-import { Alert } from "../components";
+import { Alert } from "@components";
 
 export function CheckoutForm() {
     const stripe = useStripe();
