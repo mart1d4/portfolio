@@ -42,7 +42,7 @@ export function Header({ lang, dic }: { lang: Locale; dic: Dictionary }) {
                     <Languages lang={lang} />
 
                     <Link
-                        href="/donate"
+                        href={`/${lang}/donate`}
                         className={styles.donate}
                         aria-label="Link to donate page"
                     >

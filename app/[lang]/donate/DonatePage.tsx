@@ -5,6 +5,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { CheckoutForm } from "./CheckoutForm";
 import { useEffect, useState } from "react";
 import styles from "./Donate.module.css";
+import { Dictionary } from "@/types";
 import _ from "lodash";
 
 let stripePromise: null | Promise<Stripe | null> = null;
@@ -19,7 +20,7 @@ if (process.env.NODE_ENV === "development") {
     );
 }
 
-export default function Donate() {
+export default function Donate({ dic }: { dic: Dictionary }) {
     const [clientSecret, setClientSecret] = useState("");
     const [amount, setAmount] = useState(5);
 
@@ -74,7 +75,7 @@ export default function Donate() {
                     options={options}
                     stripe={stripePromise}
                 >
-                    <CheckoutForm />
+                    <CheckoutForm dic={dic} />
                 </Elements>
             )}
         </>

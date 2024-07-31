@@ -1,4 +1,5 @@
 {
+    "lang": "fr",
     "header": {
         "iconAlt": "Un selfie de moi"
     },
@@ -50,5 +51,26 @@
             "success": "Message envoyé avec succès !"
         },
         "usernameCopied": "Nom d'utilisateur copié dans le presse-papiers!"
+    },
+    "donate": {
+        "title": "Aide-moi à démarrer",
+        "text": "Actuellement étudiant en informatique à l'université, je cherche un moyen de démarrer avec de vrais projets et je recherche des clients potentiels. Si tu peux m'aider, ce serait super cool. Si tu souhaitez me soutenir mais tu ne sais pas comment, tu peux me faire un petit don, ça m'aiderait beaucoup!",
+        "paypal": "Tu peux aussi envoyer l'argent directement sur mon PayPal si tu préfères. Utilise simplement",
+        "link": "ce lien",
+        "button": "Donner",
+        "success": "Paiement réussi!",
+        "processing": "Paiement en cours de traitement.",
+        "unsuccessful": "Le paiement n'a pas abouti, veuillez réessayer.",
+        "error": "Quelque chose s'est mal passé.",
+        "unexpected": "Une erreur inattendue s'est produite."
+    },
+    "paymentSuccess": {
+        "title": "Paiement réussi!",
+        "text": "Merci pour ton soutien! Tu es génial! 🎉"
+    },
+    "error": {
+        "title": "Quelque chose s'est mal passé!",
+        "text": "Ne t'inquiète pas, nous avons été notifiés et nous le réparerons dès que possible. En attendant, tu peux essayer de rafraîchir la page ou revenir plus tard.",
+        "button": "Actualiser"
     }
 }

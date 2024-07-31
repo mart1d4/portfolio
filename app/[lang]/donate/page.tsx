@@ -1,33 +1,31 @@
+import { getDictionary } from "@/lib/getDictionary";
 import styles from "./Donate.module.css";
+import { Locale } from "@/i18n-config";
 import Donate from "./DonatePage";
 
-export default function DonatePage() {
+export default async function DonatePage({ params: { lang } }: { params: { lang: Locale } }) {
+    const dictionary = await getDictionary(lang);
+
     return (
         <main className={styles.main}>
             <section>
-                <h1>Help me getting started</h1>
+                <h1>{dictionary.donate.title}</h1>
+
+                <p>{dictionary.donate.text}</p>
 
                 <p>
-                    Currently studying Computer Science at university, I am looking for a way to get
-                    started with real projects and am looking for potential clients. If you could
-                    help me with that, I would be very grateful. In case you want to support me but
-                    don't know how, consider donating a small amount of money. It would help me a
-                    lot!
-                </p>
-
-                <p>
-                    You can send the money directly to my PayPal if you prefer. Just use{" "}
+                    {dictionary.donate.paypal}{" "}
                     <a
                         href="https://paypal.me/themart1d4"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        this link
+                        {dictionary.donate.link}
                     </a>
                     .
                 </p>
 
-                <Donate />
+                <Donate dic={dictionary} />
             </section>
         </main>
     );

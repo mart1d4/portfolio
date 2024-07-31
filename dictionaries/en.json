@@ -1,4 +1,5 @@
 {
+    "lang": "en",
     "header": {
         "iconAlt": "A selfie of me"
     },
@@ -50,5 +51,26 @@
             "success": "Message sent successfully!"
         },
         "usernameCopied": "Username copied to clipboard!"
+    },
+    "donate": {
+        "title": "Help me getting started",
+        "text": "Currently studying Computer Science at university, I am looking for a way to get started with real projects and am looking for potential clients. If you could help me with that, I would be very grateful. In case you want to support me but don't know how, consider donating a small amount of money. It would help me a lot!",
+        "paypal": "You can send the money directly to my PayPal if you prefer. Just use",
+        "link": "this link",
+        "button": "Donate",
+        "success": "Payment succeeded!",
+        "processing": "Your payment is processing.",
+        "unsuccessful": "Your payment was not successful, please try again.",
+        "error": "Something went wrong.",
+        "unexpected": "An unexpected error occurred."
+    },
+    "paymentSuccess": {
+        "title": "Payment succeeded!",
+        "text": "Thank you for your donation! Your support means a lot to me."
+    },
+    "error": {
+        "title": "Something went wrong!",
+        "text": "Don't worry though, we've been notified and will fix it as soon as possible. In the meantime, you can try to refresh the page or come back later.",
+        "button": "Refresh"
     }
 }

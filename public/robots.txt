@@ -1,5 +1,7 @@
 User-Agent: *
 Allow: /
 Disallow: /private/
+Disallow: /en/donate/success
+Disallow: /fr/donate/success
 
 Sitemap: https://www.mart1d4.dev/sitemap.xml

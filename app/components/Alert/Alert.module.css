@@ -18,6 +18,7 @@
     white-space: nowrap;
     overflow: hidden;
     line-height: 1.75;
+    z-index: 1000;
 }
 
 .alert > div {

@@ -1,9 +1,10 @@
 import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import styles from "./CheckoutForm.module.css";
 import { useEffect, useState } from "react";
+import { Dictionary } from "@/types";
 import { Alert } from "@components";
 
-export function CheckoutForm() {
+export function CheckoutForm({ dic }: { dic: Dictionary }) {
     const stripe = useStripe();
     const elements = useElements();
 
@@ -26,16 +27,16 @@ export function CheckoutForm() {
         stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
             switch (paymentIntent?.status) {
                 case "succeeded":
-                    setMessage("Payment succeeded!");
+                    setMessage(dic.donate.success);
                     break;
                 case "processing":
-                    setMessage("Your payment is processing.");
+                    setMessage(dic.donate.processing);
                     break;
                 case "requires_payment_method":
-                    setMessage("Your payment was not successful, please try again.");
+                    setMessage(dic.donate.unsuccessful);
                     break;
                 default:
-                    setMessage("Something went wrong.");
+                    setMessage(dic.donate.error);
                     break;
             }
         });
@@ -59,14 +60,14 @@ export function CheckoutForm() {
         const { error } = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                return_url: `${window.location.origin}/donate/success`,
+                return_url: `${window.location.origin}/${dic.lang}/donate/success`,
             },
         });
 
         if (error.type === "card_error" || error.type === "validation_error") {
             setMessage(error.message ?? "An unexpected error occurred.");
         } else {
-            setMessage("An unexpected error occurred.");
+            setMessage(dic.donate.unexpected);
         }
 
         setIsLoading(false);
@@ -93,7 +94,7 @@ export function CheckoutForm() {
                 className={styles.submit}
                 disabled={isLoading || !stripe || !elements}
             >
-                Donate {isLoading && <div className={styles.loading} />}
+                {dic.donate.button} {isLoading && <div className={styles.loading} />}
             </button>
         </form>
     );
