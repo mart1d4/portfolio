@@ -29,8 +29,6 @@ export const config = {
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
-    console.log("pathname", pathname);
-
     // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
     if (
         [
@@ -45,6 +43,12 @@ export function middleware(request: NextRequest) {
             "/assets/tourist.svg",
             "/assets/404.svg",
             "/assets/me.webp",
+            "/assets/projects/spark.webp",
+            "/assets/projects/portfolio.webp",
+            "/assets/projects/alpaca.webp",
+            "/assets/projects/llemur.webp",
+            "/assets/projects/floppy-bot.webp",
+            "/assets/projects/snake.webp",
         ].includes(pathname)
     ) {
         return;

@@ -25,6 +25,130 @@
     margin: 0 auto;
 }
 
+.project {
+    display: grid;
+    grid-template-columns: calc(55% - 20px) calc(45% - 20px);
+    gap: 40px;
+    margin: 180px 0;
+}
+
+.project:nth-child(even) {
+    grid-template-columns: calc(45% - 20px) calc(55% - 20px);
+}
+
+.project:nth-child(even) > :first-child {
+    order: 2;
+}
+
+.project > main {
+    background-color: var(--bg-2);
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform 0.25s ease;
+}
+
+.project > main:hover {
+    transform: rotate(-1deg) scale(1.05);
+}
+
+.project:nth-child(odd) > main:hover {
+    transform: rotate(1deg) scale(1.05);
+}
+
+.project > main > header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.project > main > header > h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--fg-1);
+}
+
+.project > main > header > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project > main > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--fg-2);
+    line-height: 1.5;
+    letter-spacing: 0.025rem;
+}
+
+.project > main > footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.project > main > footer > a,
+.project > main > footer > div {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--fg-1);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--primary);
+    border-radius: 1000px;
+    padding: 0 24px;
+    text-decoration: none;
+    letter-spacing: 0.025rem;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.project > main > footer > div {
+    padding: 0 16px;
+    background-color: transparent;
+}
+
+.project > main > footer > a:hover,
+.project > main > footer > a:focus-visible {
+    background-color: var(--primary-2);
+}
+
+.project > main > footer > a:active {
+    background-color: var(--primary-3);
+}
+
+.project > aside {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 16px;
+    height: fit-content;
+    background-color: var(--bg-2);
+    transition: transform 0.25s ease;
+}
+
+.project > aside:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.project:nth-child(odd) > aside:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.project > aside > img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (max-width: 920px) {
     .main > section > h1 {
         font-size: clamp(32px, 5vw, 48px);
@@ -38,12 +162,6 @@
 @media screen and (max-width: 768px) {
     .main {
         margin: 80px auto;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .main {
-        margin: 40px auto;
     }
 }
 

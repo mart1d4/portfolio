@@ -72,5 +72,83 @@
         "title": "Something went wrong!",
         "text": "Don't worry though, we've been notified and will fix it as soon as possible. In the meantime, you can try to refresh the page or come back later.",
         "button": "Refresh"
+    },
+    "projects": {
+        "title": "My Projects",
+        "text": "Here are some of the projects I've worked on. I hope you like them! If you want to see more, you can check out my GitHub profile or the organizations I'm part of.",
+        "ghButton": "View on GitHub",
+        "demoButton": "View Demo",
+        "portfolioNote": "You're already here! 🎉",
+        "progress": "Work in progress",
+        "done": "Project completed",
+        "list": [
+            {
+                "name": "Spark",
+                "previously": "Chat App",
+                "description": "A chat application that allows users to communicate in real-time. The app was heavily inspired by Discord and features a similar design. I started building it once I learned how to create and use databases, and further developed it as I learned more about web development. This project is my most complex one yet and I'm very proud of it, although it's still a work in progress and needs some improvements.",
+                "stack": [
+                    "TypeScript",
+                    "Next.js",
+                    "React",
+                    "Fastify",
+                    "MySQL",
+                    "Amazon S3",
+                    "Pusher"
+                ],
+                "ghLink": "https://github.com/mart1d4/chat-app",
+                "demoLink": "https://chat-app.mart1d4.dev",
+                "imageAlt": "Screenshot of the Spark app",
+                "image": "spark.webp",
+                "inProgress": true
+            },
+            {
+                "name": "Portfolio",
+                "description": "My personal portfolio website. I built it to showcase my projects and skills, and I plan to keep improving it as I learn new things, like adding a blog section and making it more interactive.",
+                "stack": ["TypeScript", "Next.js", "React", "Stripe"],
+                "ghLink": "https://github.com/mart1d4/portfolio",
+                "imageAlt": "Screenshot of the Portfolio website",
+                "image": "portfolio.webp",
+                "inProgress": false
+            },
+            {
+                "name": "Alpaca",
+                "previously": "Mneme",
+                "description": "Alpaca is a learning app that helps users memorize things more effectively. As opposed to other alternatives, it uses a range of different techniques to help memorization, letting users choose the one that works best for them. This app is the one that made me and my friends choose to create our own cooperative, LLAMA! More on that in the About section.",
+                "stack": ["JavaScript", "Next.js", "React", "MongoDB", "MariaDB"],
+                "ghLink": "https://github.com/LLAMA-Coop/Alpaca",
+                "demoLink": "https://alpaca.mart1d4.dev",
+                "imageAlt": "Screenshot of the Alpaca app",
+                "image": "alpaca.webp",
+                "inProgress": true
+            },
+            {
+                "name": "Llemur",
+                "previously": "ccems",
+                "description": "Llemur is a company system management app that helps small businesses manage their employees, locations and deadlines. Llemur is also a part of the cooperative project I mentioned earlier, and it's the first project we made for a client. It's still in development and we plan to add more features in the future.",
+                "stack": ["JavaScript", "Next.js", "React", "MariaDB", "Fastify"],
+                "demoLink": "https://llama.coop/llemur",
+                "imageAlt": "Screenshot of the Llemur app",
+                "image": "llemur.webp",
+                "inProgress": true
+            },
+            {
+                "name": "Floppy Bot",
+                "description": "A Discord bot that I created for my personal server. It features a variety of commands, including a music player, a moderation system, and more. It is in hanging development and I plan to add more features in the future as I need them.",
+                "stack": ["TypeScript", "Node.js", "Discord.js"],
+                "ghLink": "https://github.com/mart1d4/floppy-bot",
+                "imageAlt": "Screenshot of Floppy Bot in action",
+                "image": "floppy-bot.webp",
+                "inProgress": true
+            },
+            {
+                "name": "Snake",
+                "description": "A simple Snake game that I made as a university project. It was my first project using Java, and I plan to improve it in the future, adding more features and making the AI smarter.",
+                "stack": ["Java", "JavaFX"],
+                "ghLink": "https://github.com/mart1d4/snake",
+                "imageAlt": "Screenshot of the Snake game",
+                "image": "snake.webp",
+                "inProgress": true
+            }
+        ]
     }
 }

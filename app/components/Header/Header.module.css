@@ -1,5 +1,6 @@
 .header {
     border-bottom: 1px solid var(--bg-2);
+    user-select: none;
 }
 
 .header > div {

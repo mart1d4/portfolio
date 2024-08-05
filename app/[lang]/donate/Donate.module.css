@@ -48,12 +48,6 @@
     }
 }
 
-@media screen and (max-width: 576px) {
-    .main {
-        margin: 40px auto;
-    }
-}
-
 @keyframes fadeIn {
     from {
         transform: translateY(20px);

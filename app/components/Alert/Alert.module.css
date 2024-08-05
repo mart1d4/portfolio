@@ -61,6 +61,6 @@
     .alert {
         white-space: normal;
         overflow: visible;
-        width: 90%;
+        max-width: 90%;
     }
 }
