@@ -1,7 +1,7 @@
 import { getDictionary } from "@/lib/getDictionary";
 import styles from "./Donate.module.css";
 import { Locale } from "@/i18n-config";
-import Donate from "./DonatePage";
+import { Donate } from "./DonatePage";
 
 export default async function DonatePage({ params: { lang } }: { params: { lang: Locale } }) {
     const dictionary = await getDictionary(lang);

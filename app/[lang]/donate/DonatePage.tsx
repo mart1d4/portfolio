@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "development") {
     );
 }
 
-export default function Donate({ dic }: { dic: Dictionary }) {
+export function Donate({ dic }: { dic: Dictionary }) {
     const [clientSecret, setClientSecret] = useState("");
     const [amount, setAmount] = useState(5);
 
@@ -49,7 +49,7 @@ export default function Donate({ dic }: { dic: Dictionary }) {
     }
 
     const root = document.documentElement;
-    const primary = getComputedStyle(root).getPropertyValue("--primary");
+    const primary = getComputedStyle(root)?.getPropertyValue("--primary") || "#0f7aaf";
 
     const options = {
         clientSecret,
