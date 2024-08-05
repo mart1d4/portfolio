@@ -48,8 +48,13 @@ export function Donate({ dic }: { dic: Dictionary }) {
         prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     }
 
-    const root = document?.documentElement;
-    const primary = getComputedStyle(root)?.getPropertyValue("--primary") || "#0f7aaf";
+    let root: null | HTMLElement = null;
+    let primary = "#0f7aaf";
+
+    if (typeof document !== "undefined") {
+        root = document.documentElement;
+        primary = getComputedStyle(root).getPropertyValue("--primary");
+    }
 
     const options = {
         clientSecret,
