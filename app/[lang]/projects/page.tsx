@@ -27,10 +27,11 @@ export default async function ProjectsPage({ params: { lang } }: { params: { lan
                                     <h2>{project.name}</h2>
 
                                     <span
-                                        title={dic.progress}
-                                        aria-label={dic.progress}
+                                        title={project.inProgress ? dic.progress : dic.done}
                                         className={styles.status}
                                     >
+                                        <span>{project.inProgress ? dic.progress : dic.done}</span>
+
                                         {project.inProgress ? (
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -92,8 +93,8 @@ export default async function ProjectsPage({ params: { lang } }: { params: { lan
 
                             <aside>
                                 <Image
-                                    width={400}
-                                    height={400}
+                                    width={900}
+                                    height={900}
                                     alt={project.imageAlt}
                                     src={`/assets/projects/${project.image}`}
                                 />

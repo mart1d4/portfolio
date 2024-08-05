@@ -22,6 +22,7 @@
     font-weight: 400;
     color: var(--fg-2);
     line-height: 1.75;
+    max-width: 75%;
     margin: 0 auto;
 }
 
@@ -68,10 +69,16 @@
     color: var(--fg-1);
 }
 
-.project > main > header > span {
+.project .status {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.project .status > span {
+    height: 0;
+    width: 0;
+    overflow: hidden;
 }
 
 .project > main > p {
@@ -85,6 +92,7 @@
 .project > main > footer {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 16px;
     margin-top: 24px;
 }
@@ -95,7 +103,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--fg-1);
+    color: var(--primary-fg);
     font-size: 14px;
     font-weight: 600;
     background-color: var(--primary);
@@ -109,6 +117,7 @@
 
 .project > main > footer > div {
     padding: 0 16px;
+    color: var(--fg-1);
     background-color: transparent;
 }
 
@@ -149,6 +158,26 @@
         0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 1024px) {
+    .project,
+    .project:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .project:nth-child(even) > :first-child {
+        order: 0;
+    }
+
+    .project > main {
+        transform: none !important;
+    }
+
+    .project > aside {
+        width: 100%;
+        transform: none !important;
+    }
+}
+
 @media screen and (max-width: 920px) {
     .main > section > h1 {
         font-size: clamp(32px, 5vw, 48px);
@@ -162,6 +191,24 @@
 @media screen and (max-width: 768px) {
     .main {
         margin: 80px auto;
+    }
+
+    .main > section > p {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .main > section > p {
+        max-width: 100%;
+    }
+
+    .project > main > header > h2 {
+        font-size: 24px;
+    }
+
+    .project > main > p {
+        font-size: 16px;
     }
 }
 
