@@ -72,7 +72,10 @@ export function Donate({ dic }: { dic: Dictionary }) {
             <div className={styles.amount}>
                 <h2>{amount} €</h2>
 
+                <label htmlFor="amount">{dic.donate.amount}</label>
+
                 <input
+                    id="amount"
                     type="range"
                     min="1"
                     max="500"

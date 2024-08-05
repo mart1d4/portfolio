@@ -11,18 +11,19 @@ export function Header({ lang, dic }: { lang: Locale; dic: Dictionary }) {
             <div>
                 <div>
                     <Link
-                        href="/"
                         id="top"
+                        href="/"
                         className={styles.logo}
+                        aria-label={dic.header.logoLink}
                     >
                         <Image
-                            src="/assets/me.webp"
-                            alt={dic.header.iconAlt}
                             width={44}
                             height={44}
+                            src="/assets/me.webp"
+                            alt={dic.header.iconAlt}
                         />
 
-                        <span>mart1d4</span>
+                        <span aria-hidden>mart1d4</span>
                     </Link>
                 </div>
 
@@ -39,7 +40,10 @@ export function Header({ lang, dic }: { lang: Locale; dic: Dictionary }) {
                 </nav>
 
                 <div>
-                    <Languages lang={lang} />
+                    <Languages
+                        lang={lang}
+                        dic={dic}
+                    />
 
                     <Link
                         href={`/${lang}/donate`}

@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { i18n, type Locale } from "@/i18n-config";
 import { usePathname } from "next/navigation";
 import styles from "./Languages.module.css";
+import { Dictionary } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Languages({ lang }: { lang: Locale }) {
+export function Languages({ lang, dic }: { lang: Locale; dic: Dictionary }) {
     const [open, setOpen] = useState(false);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const menuRef = useRef<HTMLUListElement>(null);
@@ -42,15 +43,16 @@ export function Languages({ lang }: { lang: Locale }) {
         <div className={styles.container}>
             <button
                 ref={buttonRef}
-                aria-label="Languages"
+                aria-label="Language picker"
                 aria-expanded={open}
                 aria-controls="languages"
                 onClick={() => setOpen(!open)}
             >
                 <Image
+                    alt={lang}
                     width={20}
                     height={20}
-                    alt={lang}
+                    aria-hidden
                     src={`/assets/flags/${lang}.svg`}
                 />
 
@@ -78,13 +80,15 @@ export function Languages({ lang }: { lang: Locale }) {
                 {i18n.locales.map((locale) => (
                     <li key={locale}>
                         <Link
+                            aria-label={dic[locale]}
                             onClick={() => setOpen(false)}
                             href={redirectedPathName(locale)}
                             aria-current={locale === lang ? "page" : undefined}
                         >
                             <img
+                                aria-hidden
+                                alt={`${lang} flag`}
                                 src={`/assets/flags/${locale}.svg`}
-                                alt={`${locale} flag`}
                             />
                         </Link>
                     </li>

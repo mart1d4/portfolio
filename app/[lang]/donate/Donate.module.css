@@ -24,8 +24,21 @@
     margin-bottom: 40px;
 }
 
+.main > section > p > a {
+    color: var(--fg-1);
+    text-decoration: underline;
+    border-radius: var(--radius);
+}
+
 .amount {
     margin: 40px 0;
+}
+
+.amount > label {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .amount > input {

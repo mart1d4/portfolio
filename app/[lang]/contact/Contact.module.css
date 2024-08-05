@@ -30,7 +30,9 @@
 }
 
 .main > section > p > a {
-    color: var(--primary);
+    color: var(--fg-1);
+    text-decoration: underline;
+    border-radius: var(--radius);
 }
 
 .centered > h1,
