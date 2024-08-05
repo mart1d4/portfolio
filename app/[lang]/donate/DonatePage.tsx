@@ -48,7 +48,7 @@ export function Donate({ dic }: { dic: Dictionary }) {
         prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     }
 
-    const root = document.documentElement;
+    const root = document?.documentElement;
     const primary = getComputedStyle(root)?.getPropertyValue("--primary") || "#0f7aaf";
 
     const options = {
