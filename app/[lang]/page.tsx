@@ -16,8 +16,8 @@ export default async function HomePage({ params: { lang } }: { params: { lang: L
                     <p>{dictionary.landing.hero.text}</p>
 
                     <div className={styles.cta}>
-                        <Link href="/projects">{dictionary.landing.hero.button1}</Link>
-                        <Link href="/contact">{dictionary.landing.hero.button2}</Link>
+                        <Link href={`/${lang}/projects`}>{dictionary.landing.hero.button1}</Link>
+                        <Link href={`/${lang}/contact`}>{dictionary.landing.hero.button2}</Link>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ export default async function HomePage({ params: { lang } }: { params: { lang: L
 
                 <p>{dictionary.landing.game.text}</p>
 
-                <Link href="/projects">{dictionary.landing.game.button}</Link>
+                <Link href={`/${lang}/projects`}>{dictionary.landing.game.button}</Link>
             </section>
         </main>
     );

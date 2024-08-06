@@ -12,7 +12,7 @@ export function Header({ lang, dic }: { lang: Locale; dic: Dictionary }) {
                 <div>
                     <Link
                         id="top"
-                        href="/"
+                        href={`/${lang}`}
                         className={styles.logo}
                         aria-label={dic.header.logoLink}
                     >
