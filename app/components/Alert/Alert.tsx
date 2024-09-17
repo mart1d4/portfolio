@@ -40,7 +40,7 @@ export function Alert({ message, type }: AlertProps) {
                 </div>
             )}
 
-            {message}
+            <p>{message}</p>
         </div>
     );
 }

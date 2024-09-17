@@ -1,3 +1,4 @@
+import { DiscordSocial } from "./DiscordSocial";
 import styles from "./Footer.module.css";
 import { socials } from "@/lib/socials";
 import { Dictionary } from "@/types";
@@ -11,18 +12,30 @@ export async function Footer({ dic }: { dic: Dictionary }) {
                     <p>{dic.footer.text}</p>
 
                     <div className={styles.socials}>
-                        {socials.map((social) => (
-                            <a
-                                target="_blank"
-                                key={social.name}
-                                href={social.url}
-                                title={social.name}
-                                aria-label={social.name}
-                                rel="noopener noreferrer"
-                            >
-                                {social.icon}
-                            </a>
-                        ))}
+                        {socials.map((social) => {
+                            if (social.name === "Discord") {
+                                return (
+                                    <DiscordSocial
+                                        dic={dic}
+                                        social={social}
+                                        key={social.name}
+                                    />
+                                );
+                            }
+
+                            return (
+                                <a
+                                    target="_blank"
+                                    key={social.name}
+                                    href={social.url}
+                                    title={social.name}
+                                    aria-label={social.name}
+                                    rel="noopener noreferrer"
+                                >
+                                    {social.icon}
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
 

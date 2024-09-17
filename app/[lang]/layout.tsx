@@ -1,5 +1,5 @@
 import { Header } from "@/app/components/Header/Header";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Footer } from "@components";
 import "./global.css";
 
@@ -18,9 +18,7 @@ export const metadata = {
     },
 };
 
-const roboto = Roboto({
-    weight: ["400", "500", "700"],
-    style: ["normal", "italic"],
+const inter = Inter({
     subsets: ["latin"],
     display: "swap",
 });
@@ -37,9 +35,12 @@ export default async function RootLayout({
     return (
         <html
             lang={params.lang}
-            className={roboto.className}
+            className={inter.className}
         >
             <body>
+                {/* So Firefox displays page after css has loaded */}
+                <script>0</script>
+
                 <Header
                     dic={dictionary}
                     lang={params.lang}

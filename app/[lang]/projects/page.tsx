@@ -1,8 +1,9 @@
 import { getDictionary } from "@/lib/getDictionary";
 import styles from "./Projects.module.css";
+import { ScrollDown } from "@components";
 import { Locale } from "@/i18n-config";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function ProjectsPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dictionary = await getDictionary(lang);
@@ -13,10 +14,15 @@ export default async function ProjectsPage({ params: { lang } }: { params: { lan
             <section>
                 <h1>{dic.title}</h1>
                 <p>{dic.text}</p>
+
+                <ScrollDown scrollTarget="projects" />
             </section>
 
             <section>
-                <ul className={styles.projectList}>
+                <ul
+                    id="projects"
+                    className={styles.projectList}
+                >
                     {dic.list.map((project) => (
                         <li
                             key={project.name}

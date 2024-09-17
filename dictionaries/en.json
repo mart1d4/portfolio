@@ -66,7 +66,9 @@
         "processing": "Your payment is processing.",
         "unsuccessful": "Your payment was not successful, please try again.",
         "error": "Something went wrong.",
-        "unexpected": "An unexpected error occurred."
+        "unexpected": "An unexpected error occurred.",
+        "loading": "Loading the payment form...",
+        "stripeError": "An error occurred while displaying the payment form. Please try again later or use the PayPal link."
     },
     "paymentSuccess": {
         "title": "Payment succeeded!",
@@ -90,15 +92,7 @@
                 "name": "Spark",
                 "previously": "Chat App",
                 "description": "A chat application that allows users to communicate in real-time. The app was heavily inspired by Discord and features a similar design. I started building it once I learned how to create and use databases, and further developed it as I learned more about web development. This project is my most complex one yet and I'm very proud of it, although it's still a work in progress and needs some improvements.",
-                "stack": [
-                    "TypeScript",
-                    "Next.js",
-                    "React",
-                    "Fastify",
-                    "MySQL",
-                    "Amazon S3",
-                    "Pusher"
-                ],
+                "stack": ["TypeScript", "Next.js", "React", "Fastify", "MySQL", "Amazon S3", "Pusher"],
                 "ghLink": "https://github.com/mart1d4/chat-app",
                 "demoLink": "https://chat-app.mart1d4.dev",
                 "imageAlt": "Screenshot of the Spark app",
@@ -154,5 +148,9 @@
                 "inProgress": true
             }
         ]
+    },
+    "about": {
+        "title": "All of that is great, but who are you?",
+        "text": "I'm a student at a university in Paris doing a degree in computer science. I'm passionate about web and software development and I'm always looking for new things to learn. For now, this place is just a way for me to showcase my projects and expose ways to contact me. In the future, I plan to add a blog and maybe some other features to make this place more interesting."
     }
 }

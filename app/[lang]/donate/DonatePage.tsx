@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === "development") {
 export function Donate({ dic }: { dic: Dictionary }) {
     const [clientSecret, setClientSecret] = useState("");
     const [amount, setAmount] = useState(5);
+    const [error, setError] = useState("");
 
     const debouncedFetchPaymentIntent = _.debounce((amount) => {
         fetch("/api/create-payment-intent", {
@@ -31,7 +32,10 @@ export function Donate({ dic }: { dic: Dictionary }) {
         })
             .then((res) => res.json())
             .then((data) => setClientSecret(data.clientSecret))
-            .catch((err) => console.error(err));
+            .catch((err) => {
+                console.error(err);
+                setError(dic.donate.error);
+            });
     }, 500);
 
     useEffect(() => {
@@ -93,6 +97,10 @@ export function Donate({ dic }: { dic: Dictionary }) {
                     <CheckoutForm dic={dic} />
                 </Elements>
             )}
+
+            {!clientSecret && !error && <p>{dic.donate.loading}</p>}
+
+            {!clientSecret && error && <p>{dic.donate.stripeError}</p>}
         </>
     );
 }

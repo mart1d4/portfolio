@@ -15,7 +15,7 @@
 
 .footer .content > p {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--fg-2);
     line-height: 1.5;
 }
@@ -50,7 +50,8 @@
     border-top: 1px solid var(--bg-2);
 }
 
-.socials a {
+.socials a,
+.socials button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,19 +61,25 @@
     border-radius: var(--radius);
     background-color: var(--bg-2);
     margin: 0 12px 12px 0;
+    border: none;
+    cursor: pointer;
 }
 
 .socials a:hover,
-.socials a:focus-visible {
+.socials a:focus-visible,
+.socials button:hover,
+.socials button:focus-visible {
     background-color: var(--primary);
     color: var(--primary-fg);
 }
 
-.socials a:active {
+.socials a:active,
+.socials button:active {
     filter: brightness(1.15);
 }
 
-.socials a > svg {
+.socials a > svg,
+.socials button > svg {
     width: 18px;
     height: 18px;
     fill: currentColor;

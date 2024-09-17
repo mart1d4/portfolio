@@ -12,27 +12,19 @@ export function Socials({ dic }: { dic: Dictionary }) {
 
     return (
         <div className={styles.socials}>
-            {success && (
+            {(success || error) && (
                 <Alert
-                    message={dic.contact.usernameCopied}
-                    type="success"
-                />
-            )}
-
-            {error && (
-                <Alert
-                    message={dic.contact.form.error}
-                    type="danger"
+                    message={success ? dic.contact.usernameCopied : dic.contact.form.error}
+                    type={success ? "success" : "danger"}
                 />
             )}
 
             {socials.map((social) => (
-                <Tooltip>
+                <Tooltip key={social.name}>
                     <TooltipTrigger>
                         {social.name === "Discord" ? (
                             <button
                                 title="Discord"
-                                key={social.name}
                                 aria-label="Discord"
                                 onClick={async () => {
                                     try {
@@ -50,7 +42,6 @@ export function Socials({ dic }: { dic: Dictionary }) {
                         ) : (
                             <a
                                 target="_blank"
-                                key={social.name}
                                 href={social.url}
                                 title={social.name}
                                 aria-label={social.name}

@@ -66,7 +66,9 @@
         "processing": "Paiement en cours de traitement.",
         "unsuccessful": "Le paiement n'a pas abouti, veuillez réessayer.",
         "error": "Quelque chose s'est mal passé.",
-        "unexpected": "Une erreur inattendue s'est produite."
+        "unexpected": "Une erreur inattendue s'est produite.",
+        "loading": "Chargement du formulaire de paiement...",
+        "stripeError": "Une erreur s'est produite lors de l'affichage du formulaire de paiement. Réessaies plus tard ou utilises le lien PayPal."
     },
     "paymentSuccess": {
         "title": "Paiement réussi!",
@@ -90,15 +92,7 @@
                 "name": "Spark",
                 "previously": "Chat App",
                 "description": "Une application de chat qui permet aux utilisateurs de communiquer en temps réel. L'application a été fortement inspirée par Discord et présente un design similaire. J'ai commencé à la construire une fois que j'ai appris à créer et à utiliser des bases de données, et je l'ai développée davantage au fur et à mesure que j'apprenais davantage sur le développement web. Ce projet est mon plus complexe à ce jour et j'en suis très fier, bien qu'il soit encore en cours de développement et nécessite quelques améliorations.",
-                "stack": [
-                    "TypeScript",
-                    "Next.js",
-                    "React",
-                    "Fastify",
-                    "MySQL",
-                    "Amazon S3",
-                    "Pusher"
-                ],
+                "stack": ["TypeScript", "Next.js", "React", "Fastify", "MySQL", "Amazon S3", "Pusher"],
                 "ghLink": "https://github.com/mart1d4/chat-app",
                 "demoLink": "https://chat-app.mart1d4.dev",
                 "imageAlt": "Capture d'écran de l'application Spark",
@@ -154,5 +148,9 @@
                 "inProgress": true
             }
         ]
+    },
+    "about": {
+        "title": "C'est génial, mais qui es-tu ?",
+        "text": "Je suis un étudiant en informatique sur Paris. Je suis passionné par le web et le développement de software et je suis toujours à la recherche de nouvelles choses à apprendre. Pour l'instant, ce site n'est q'un moyen pour moi de présenter mes projets et de permettre aux gens de me contacter. À l'avenir, je prévois d'ajouter un blog et peut-être d'autres fonctionnalités pour rendre ce site plus intéressant."
     }
 }
