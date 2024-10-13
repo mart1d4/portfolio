@@ -94,10 +94,11 @@ export function Form({ dic }: { dic: Dictionary }) {
                     </label>
 
                     <input
-                        type="text"
                         id="name"
+                        type="text"
                         name="name"
                         maxLength={50}
+                        autoComplete="name"
                         placeholder="C-3PO"
                         value={name}
                         onChange={(e) => {
@@ -114,10 +115,11 @@ export function Form({ dic }: { dic: Dictionary }) {
                     </label>
 
                     <input
-                        type="email"
                         id="email"
+                        type="email"
                         name="email"
                         maxLength={256}
+                        autoComplete="email"
                         placeholder="c3po@astromech.io"
                         value={email}
                         onChange={(e) => {

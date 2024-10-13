@@ -1,26 +1,26 @@
 {
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export"
-  },
-  "dependencies": {
-    "@floating-ui/react": "^0.26.23",
-    "@formatjs/intl-localematcher": "^0.5.4",
-    "@stripe/react-stripe-js": "^2.8.0",
-    "@stripe/stripe-js": "^4.4.0",
-    "@types/negotiator": "^0.6.3",
-    "lodash": "^4.17.21",
-    "negotiator": "^0.6.3",
-    "next": "^14.2.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "stripe": "^16.9.0"
-  },
-  "devDependencies": {
-    "@types/node": "22.5.2",
-    "@types/react": "18.3.5",
-    "typescript": "5.5.4"
-  }
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "export": "next export"
+    },
+    "dependencies": {
+        "@floating-ui/react": "^0.26.23",
+        "@formatjs/intl-localematcher": "^0.5.4",
+        "@stripe/react-stripe-js": "^2.8.0",
+        "@stripe/stripe-js": "^4.4.0",
+        "lodash": "^4.17.21",
+        "negotiator": "^0.6.3",
+        "next": "^14.2.7",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "stripe": "^16.9.0"
+    },
+    "devDependencies": {
+        "@types/negotiator": "^0.6.3",
+        "@types/node": "22.5.2",
+        "@types/react": "18.3.5",
+        "typescript": "5.5.4"
+    }
 }
