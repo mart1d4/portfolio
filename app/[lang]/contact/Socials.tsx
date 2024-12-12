@@ -22,13 +22,13 @@ export function Socials({ dic }: { dic: Dictionary }) {
             {socials.map((social) => (
                 <Tooltip key={social.name}>
                     <TooltipTrigger>
-                        {social.name === "Discord" ? (
+                        {!!social.username ? (
                             <button
                                 title="Discord"
                                 aria-label="Discord"
                                 onClick={async () => {
                                     try {
-                                        await navigator.clipboard.writeText("mart1d4");
+                                        await navigator.clipboard.writeText(social.username);
                                         setSuccess(true);
                                         setTimeout(() => setSuccess(false), 3000);
                                     } catch (e) {

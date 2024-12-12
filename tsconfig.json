@@ -30,7 +30,7 @@
         "**/*.tsx",
         "pages/index.mdx",
         ".next/types/**/*.ts",
-        "lib/socials.js"
+        "lib/socials.tsx"
     ],
     "exclude": ["node_modules"]
 }

@@ -33,13 +33,13 @@
     "contact": {
         "hero": {
             "title": "Contact me",
-            "text": "Want to get in touch? There are a few ways you can reach me. The easiest is to send me an email at"
+            "text": "Want to get in touch? There are a few ways you can reach out to me. The easiest is to send me an email at"
         },
         "socials": {
             "title": "Find me on my socials"
         },
         "form": {
-            "title": "Or you can use the form below",
+            "title": "Or use the form below",
             "text": "You can just send a message and leave both your name and email empty, if you want to remain anonymous.",
             "name": "Name",
             "nameTooLong": "Must be 50 characters or less.",
@@ -92,7 +92,15 @@
                 "name": "Spark",
                 "previously": "Chat App",
                 "description": "A chat application that allows users to communicate in real-time. The app was heavily inspired by Discord and features a similar design. I started building it once I learned how to create and use databases, and further developed it as I learned more about web development. This project is my most complex one yet and I'm very proud of it, although it's still a work in progress and needs some improvements.",
-                "stack": ["TypeScript", "Next.js", "React", "Fastify", "MySQL", "Amazon S3", "Pusher"],
+                "stack": [
+                    "TypeScript",
+                    "Next.js",
+                    "React",
+                    "Fastify",
+                    "MySQL",
+                    "Amazon S3",
+                    "Pusher"
+                ],
                 "ghLink": "https://github.com/mart1d4/chat-app",
                 "demoLink": "https://chat-app.mart1d4.dev",
                 "imageAlt": "Screenshot of the Spark app",

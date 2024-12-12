@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { Alert } from "../Alert/Alert";
+import { useState } from "react";
 
 export function DiscordSocial({ social, dic }) {
     const [success, setSuccess] = useState(false);
@@ -22,7 +22,7 @@ export function DiscordSocial({ social, dic }) {
                 aria-label="Discord"
                 onClick={async () => {
                     try {
-                        await navigator.clipboard.writeText("mart1d4");
+                        await navigator.clipboard.writeText(social.username);
                         setSuccess(true);
                         setTimeout(() => setSuccess(false), 3000);
                     } catch (e) {

@@ -13,7 +13,8 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
                 <h1>{dictionary.contact.hero.title}</h1>
 
                 <p>
-                    {dictionary.contact.hero.text} <a href="mailto:contact@mart1d4.me">contact@mart1d4.me</a>.
+                    {dictionary.contact.hero.text}{" "}
+                    <a href="mailto:contact@mart1d4.me">contact@mart1d4.me</a>.
                 </p>
 
                 <ScrollDown scrollTarget="socials" />
@@ -27,7 +28,7 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
                 <Socials dic={dictionary} />
             </section>
 
-            <section>
+            <section className={styles.centered}>
                 <h2>{dictionary.contact.form.title}</h2>
                 <Form dic={dictionary} />
             </section>

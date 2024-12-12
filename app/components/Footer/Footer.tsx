@@ -13,7 +13,7 @@ export async function Footer({ dic }: { dic: Dictionary }) {
 
                     <div className={styles.socials}>
                         {socials.map((social) => {
-                            if (social.name === "Discord") {
+                            if (social.username) {
                                 return (
                                     <DiscordSocial
                                         dic={dic}

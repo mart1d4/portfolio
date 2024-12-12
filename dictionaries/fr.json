@@ -39,7 +39,7 @@
             "title": "Retrouve moi sur mes réseaux sociaux"
         },
         "form": {
-            "title": "Tu peux aussi utiliser le formulaire ci-dessous",
+            "title": "Ou utilises le formulaire ci-dessous",
             "text": "Tu peux simplement envoyer un message sans fournir de nom ni d'email si tu souhaites rester anonyme.",
             "name": "Nom",
             "nameTooLong": "Doit contenir 50 caractères ou moins.",
@@ -92,7 +92,15 @@
                 "name": "Spark",
                 "previously": "Chat App",
                 "description": "Une application de chat qui permet aux utilisateurs de communiquer en temps réel. L'application a été fortement inspirée par Discord et présente un design similaire. J'ai commencé à la construire une fois que j'ai appris à créer et à utiliser des bases de données, et je l'ai développée davantage au fur et à mesure que j'apprenais davantage sur le développement web. Ce projet est mon plus complexe à ce jour et j'en suis très fier, bien qu'il soit encore en cours de développement et nécessite quelques améliorations.",
-                "stack": ["TypeScript", "Next.js", "React", "Fastify", "MySQL", "Amazon S3", "Pusher"],
+                "stack": [
+                    "TypeScript",
+                    "Next.js",
+                    "React",
+                    "Fastify",
+                    "MySQL",
+                    "Amazon S3",
+                    "Pusher"
+                ],
                 "ghLink": "https://github.com/mart1d4/chat-app",
                 "demoLink": "https://chat-app.mart1d4.dev",
                 "imageAlt": "Capture d'écran de l'application Spark",
