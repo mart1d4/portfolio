@@ -11,7 +11,8 @@ export default async function DonatePage({ params: { lang } }: { params: { lang:
             <section>
                 <h1>{dictionary.donate.title}</h1>
 
-                <p>{dictionary.donate.text}</p>
+                <p>{dictionary.donate.text1}</p>
+                <p>{dictionary.donate.text2}</p>
 
                 <p>
                     {dictionary.donate.paypal}{" "}

@@ -57,7 +57,8 @@
     },
     "donate": {
         "title": "Help me getting started",
-        "text": "Currently studying Computer Science at university, I am looking for a way to get started with real projects and am looking for potential clients. If you could help me with that, I would be very grateful. In case you want to support me but don't know how, consider donating a small amount of money. It would help me a lot!",
+        "text1": "Currently studying Computer Science at university, I am looking for a way to get started with real projects and am looking for potential clients.",
+        "text2": "In case you want to support me but don't know how, consider donating a small amount of money. It would help me a lot!",
         "amount": "Amount to donate (EUR)",
         "paypal": "You can send the money directly to my PayPal if you prefer. Just use",
         "link": "this link",

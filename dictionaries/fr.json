@@ -57,7 +57,8 @@
     },
     "donate": {
         "title": "Aide-moi à démarrer",
-        "text": "Actuellement étudiant en informatique à l'université, je cherche un moyen de démarrer avec de vrais projets et je recherche des clients potentiels. Si tu peux m'aider, ce serait super cool. Si tu souhaitez me soutenir mais tu ne sais pas comment, tu peux me faire un petit don, ça m'aiderait beaucoup!",
+        "text1": "Actuellement étudiant en informatique à l'université, je cherche un moyen de démarrer avec de vrais projets et je recherche des clients potentiels.",
+        "text2": "Si tu souhaitez me soutenir mais tu ne sais pas comment, tu peux me faire un petit don, ça m'aiderait beaucoup!",
         "amount": "Montant à donner (EUR)",
         "paypal": "Tu peux aussi envoyer l'argent directement sur mon PayPal si tu préfères. Utilise simplement",
         "link": "ce lien",
