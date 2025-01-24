@@ -92,7 +92,7 @@
             {
                 "name": "Spark",
                 "previously": "Chat App",
-                "description": "Une application de chat qui permet aux utilisateurs de communiquer en temps réel. L'application a été fortement inspirée par Discord et présente un design similaire. J'ai commencé à la construire une fois que j'ai appris à créer et à utiliser des bases de données, et je l'ai développée davantage au fur et à mesure que j'apprenais davantage sur le développement web. Ce projet est mon plus complexe à ce jour et j'en suis très fier, bien qu'il soit encore en cours de développement et nécessite quelques améliorations.",
+                "description": "Une tchat app qui permet aux utilisateurs de communiquer en temps réel. L'application a été fortement inspirée par Discord et présente un design similaire. J'ai commencé à la construire une fois que j'ai appris à créer et à utiliser des bases de données, et je l'ai développée davantage au fur et à mesure que j'apprenais de nouvelles choses. Ce projet est mon plus complexe à ce jour et j'en suis fier, bien qu'il soit encore en cours de développement et nécessite quelques améliorations.",
                 "stack": [
                     "TypeScript",
                     "Next.js",
@@ -111,7 +111,12 @@
             {
                 "name": "Portfolio",
                 "description": "Mon site web personnel. Je l'ai construit pour présenter mes projets et compétences, et je prévois de continuer à l'améliorer au fur et à mesure que j'apprends de nouvelles choses, comme l'ajout d'une section blog et le rendant plus interactif.",
-                "stack": ["TypeScript", "Next.js", "React", "Stripe"],
+                "stack": [
+                    "TypeScript",
+                    "Next.js",
+                    "React",
+                    "Stripe"
+                ],
                 "ghLink": "https://github.com/mart1d4/portfolio",
                 "imageAlt": "Capture d'écran du site Portfolio",
                 "image": "portfolio.webp",
@@ -121,7 +126,13 @@
                 "name": "Alpaca",
                 "previously": "Mneme",
                 "description": "Alpaca est une application d'apprentissage qui aide les utilisateurs à mémoriser les choses de manière plus efficace. Contrairement à d'autres alternatives, il utilise une gamme de techniques différentes pour aider à la mémorisation, permettant aux utilisateurs de choisir celle qui leur convient le mieux. Cette application a été le premier d'un grand projet qu'un ami à moi a commencé, et nous avons créé une coopérative à partir de cette idée, et nous avons maintenant une équipe travaillant sur ce projet et d'autres. Plus d'informations à ce sujet dans la section À propos.",
-                "stack": ["JavaScript", "Next.js", "React", "MongoDB", "MariaDB"],
+                "stack": [
+                    "JavaScript",
+                    "Next.js",
+                    "React",
+                    "MongoDB",
+                    "MariaDB"
+                ],
                 "ghLink": "https://github.com/LLAMA-Coop/Alpaca",
                 "demoLink": "https://alpaca.mart1d4.dev",
                 "imageAlt": "Capture d'écran de l'application Alpaca",
@@ -132,7 +143,13 @@
                 "name": "Llemur",
                 "previously": "ccems",
                 "description": "Llemur est une application de gestion de système d'entreprise qui aide les petites entreprises à gérer leurs employés, leurs emplacements et leurs délais. Llemur fait également partie du projet coopératif que j'ai mentionné précédemment, et c'est le premier projet que nous avons réalisé pour un client. Il est encore en développement et nous prévoyons d'ajouter plus de fonctionnalités à l'avenir.",
-                "stack": ["JavaScript", "Next.js", "React", "MariaDB", "Fastify"],
+                "stack": [
+                    "JavaScript",
+                    "Next.js",
+                    "React",
+                    "MariaDB",
+                    "Fastify"
+                ],
                 "demoLink": "https://llama.coop/llemur",
                 "imageAlt": "Capture d'écran de l'application Llemur",
                 "image": "llemur.webp",
@@ -141,7 +158,11 @@
             {
                 "name": "Floppy Bot",
                 "description": "Un bot Discord que j'ai créé pour mon serveur personnel. Il propose une variété de commandes, y compris un lecteur de musique, un système de modération, et plus encore. Il est en développement continu et je prévois d'ajouter plus de fonctionnalités à l'avenir au fur et à mesure que j'en aurai besoin.",
-                "stack": ["TypeScript", "Node.js", "Discord.js"],
+                "stack": [
+                    "TypeScript",
+                    "Node.js",
+                    "Discord.js"
+                ],
                 "ghLink": "https://github.com/mart1d4/floppy-bot",
                 "imageAlt": "Capture d'écran de Floppy Bot en action",
                 "image": "floppy-bot.webp",
@@ -150,7 +171,10 @@
             {
                 "name": "Snake",
                 "description": "Un simple jeu de serpent que j'ai réalisé pour un projet universitaire. C'était mon premier projet utilisant Java, et je prévois de l'améliorer à l'avenir, en ajoutant plus de fonctionnalités et en rendant l'IA plus intelligente.",
-                "stack": ["Java", "JavaFX"],
+                "stack": [
+                    "Java",
+                    "JavaFX"
+                ],
                 "ghLink": "https://github.com/mart1d4/snake",
                 "imageAlt": "Capture d'écran du jeu Snake",
                 "image": "snake.webp",
