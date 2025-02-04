@@ -134,7 +134,7 @@
                     "MariaDB"
                 ],
                 "ghLink": "https://github.com/LLAMA-Coop/Alpaca",
-                "demoLink": "https://alpaca.mart1d4.dev",
+                "demoLink": "https://llama.coop/alpaca-new",
                 "imageAlt": "Capture d'écran de l'application Alpaca",
                 "image": "alpaca.webp",
                 "inProgress": true
@@ -150,7 +150,6 @@
                     "MariaDB",
                     "Fastify"
                 ],
-                "demoLink": "https://llama.coop/llemur",
                 "imageAlt": "Capture d'écran de l'application Llemur",
                 "image": "llemur.webp",
                 "inProgress": true
