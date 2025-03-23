@@ -7,7 +7,7 @@
     --fg-2: #495057;
     --fg-3: #868e96;
 
-    --border: #ced4da;
+    --border-0: #ced4da;
 
     --primary: #0f7aaf;
     --primary-50: #0f7aaf79;
@@ -21,7 +21,7 @@
     --secondary: #6c757d;
 
     --success: #28a745;
-    --success-2: #217735;
+    --success-1: #217735;
     --success-fg: #fff;
 
     --info: #17a2b8;
@@ -37,7 +37,8 @@
     --content-padding: 120px;
     --radius: 3px;
 
-    --transition: filter 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    --transition: filter 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease,
+        border-color 0.15s ease;
 
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -50,7 +51,7 @@
         --fg-1: #f8f9fa;
         --fg-2: #dee2e6;
         --fg-3: #e9ecef;
-        --border: #495057;
+        --border-0: #495057;
     }
 }
 
@@ -88,8 +89,8 @@
 
 *:focus-visible {
     outline: none;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), 0 0 0 3px var(--primary-20),
-        0 1px 1px 0 var(--primary-08);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02),
+        0 0 0 3px var(--primary-20), 0 1px 1px 0 var(--primary-08);
 }
 
 @media (prefers-reduced-motion: reduce) {

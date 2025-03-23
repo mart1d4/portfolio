@@ -44,7 +44,7 @@
 .alert svg {
     padding: 4px;
     border-radius: 50%;
-    background-color: var(--success-2);
+    background-color: var(--success-1);
 }
 
 .alert.danger svg {
