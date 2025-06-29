@@ -134,7 +134,7 @@
                     "MariaDB"
                 ],
                 "ghLink": "https://github.com/LLAMA-Coop/Alpaca",
-                "demoLink": "https://llama.coop/alpaca-new",
+                "demoLink": "https://alpaca.llamacoop.dev",
                 "imageAlt": "Screenshot of the Alpaca app",
                 "image": "alpaca.webp",
                 "inProgress": true
